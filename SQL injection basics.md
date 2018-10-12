@@ -46,10 +46,13 @@ else {
 }
 ```
 We would want to make the statement `WHERE password = '$input'` return True and then we cant get a row from the query and login.
+
 So if we insert this input: `or 1=1` then the statement will return True, right? well, no.
 the query would look like this `SELECT * FROM users WHERE password = 'or 1=1'` and the WHERE caluse will search for a username with the password `or 1=1`.
+
 so the _payload_(input) for this would be `' or 'x'='x`, and the query would look like this: 
 `'SELECT * FROM users WHERE password = '' or 'x'='x'`
+
 that would make the statement always True, the first quote is to close the first clause in the original statement and the second clause is used to close the second clause in the original code.
 
 ## 0x03 Artical payloads:
