@@ -61,3 +61,7 @@ that would make the statement always True, the first quote is to close the first
 ## 0x04 Buzzwords:
 - _payload_: payload is the actual data in the transmitted message.
 - _RCE_: stands for `Remote Code Execution`.
+
+## 0x05 Recommanded CTF's:
+_CTF_ is a challenge used for practicing.
+1. https://ringzer0ctf.com/challenges/1
