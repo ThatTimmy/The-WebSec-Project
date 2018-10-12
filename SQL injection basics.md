@@ -1,7 +1,7 @@
 # SQL injection basics
 
 **Needed knowledge:**
-- basic understanding of what is sql and simple syntax.
+- basic understanding of what sql is and some simple sqlite syntax.
 - simple php.
 - common sense.
 - a computer..?
