@@ -11,7 +11,8 @@
 
 `SQL injection` is probably my favourite web vulnerability, maybe after `PHP object injection`, but that's a complete another article.
 
-**________0x01 Basic SQL:**
+## 0x01 Basic SQL:
+
 So, before we dive into the famous `SQL injection` (aka *SQLi*) we need to know what SQL actually is, right? of course.
 
 ```
@@ -22,7 +23,7 @@ taken from the [SQL page](https://en.wikipedia.org/wiki/SQL) in wikipedia.
 
 in other (and more simple, no offense to wikipedia tho) words, sql is a language used to communicate with table based databases. for more information about sql I suggest visiting [www.sqlitetutorial.net](http://www.sqlitetutorial.net/). (about sqlite, which is a specific sql based database). Enough sql for now, it's time for the real thing.
 
-**________0x02 SQL injection:**
+## 0x02 SQL injection:
 
 Sql Injection is server-side vulnerability where the attacker inject sql (user controled input) to dump data from the database,
 and even sometimes used to get _RCE_ on the server.
@@ -51,9 +52,9 @@ so the _payload_(input) for this would be `' or 'x'='x`, and the query would loo
 `'SELECT * FROM users WHERE password = '' or 'x'='x'`
 that would make the statement always True, the first quote is to close the first clause in the original statement and the second clause is used to close the second clause in the original code.
 
-**________0x03 Artical payloads:**
+## 0x03 Artical payloads:
 `' or 'x'='x` to bypass `SELECT * FROM users WHERE password = '$input'`.
 
-**________0x04 Buzzwords:**
+## 0x04 Buzzwords:
 - _payload_: payload is the actual data in the transmitted message.
 - _RCE_: stands for `Remote Code Execution`.
