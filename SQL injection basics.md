@@ -35,7 +35,7 @@ This sql query will return all data about a username with a password given by th
 ### **_It's exploiting time!_**
 how can we exploit this simple sql query? well that's simple.
 let's say that this query is what loggin you into the website, consider the following php code:
-```
+```php
 <?php
 $res = doQuery("SELECT * FROM users WHERE password = '$input'");
 if (!empty($res)) {
@@ -44,6 +44,7 @@ if (!empty($res)) {
 else {
   die();
 }
+?>
 ```
 We would want to make the statement `WHERE password = '$input'` return True and then we cant get a row from the query and login.
 
